@@ -8,8 +8,8 @@
 #                                                                                                                      #
 ########################################################################################################################
 
-$User = "nvsinventory"
-$EncryptedPassword = "_RVToolsPWDnkW2Vic9FhjHivO6I3CUrq0earyy2J3tncRHKNNOyR7uEPYb7FMsPvwQ7/yLGhovsYx34GAnItD3VfmMCdVU/gQqgTup/wOsJb8/1Hn8taw=" # use RVToolsPasswordEncryption.exe to encrypt your password
+$User = ""
+$EncryptedPassword = "=" # use RVToolsPasswordEncryption.exe to encrypt your password
 $fichier = "C:\Users\$env:USERNAME\Documents\RVtools\xlsv"
 $date = Get-Date -Format yyyy-MM-dd
 
@@ -53,3 +53,4 @@ foreach ($line in Get-Content $liste) {
     # Lancement du processus RVTools
     $Process = Start-Process -FilePath ".\RVTools.exe" -ArgumentList $Arguments -NoNewWindow -Wait -PassThru
 }
+
